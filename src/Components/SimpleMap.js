@@ -7,6 +7,7 @@ const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
 export default function SimpleMap(){
     // const { vehicleId } = useParams();
+    const google_map_api_key = "AIzaSyD36F2K6M8wxwyO29jwM6P9R_Uyz6XMB8U";
     const location = useLocation();
     const stateData = location.state;
 console.log(stateData,'----------stateData')
@@ -22,7 +23,7 @@ console.log(stateData,'----------stateData')
     // Important! Always set the container height explicitly
     <div style={{ height: '100vh', width: '100%' }}>
       <GoogleMapReact
-        bootstrapURLKeys={{ key: "" }}
+        bootstrapURLKeys={{ key:  google_map_api_key}}
         defaultCenter={defaultProps.center}
         defaultZoom={defaultProps.zoom}
       >
